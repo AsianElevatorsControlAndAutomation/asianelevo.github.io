@@ -1,0 +1,38 @@
+.productCard{
+    &:hover{
+        .productHeadings{
+            animation: productCardHeadingAnimation 0.5s ease-in-out 0.2s;
+            // animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+        }
+        .productCoverImg{
+            animation: productCardImgAnimation 2s ease-in-out;
+            // animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+        }
+    }
+}
+
+@keyframes productCardHeadingAnimation{
+    0%{
+        transform: translateY(0);
+        color: white;
+    }
+    100%{
+        background-image: linear-gradient(to right, var(--companylogo-color1), rgba(0,0,0,0)) ;
+        transform: translateY(-5rem);
+        border-radius: 10px;
+        // color: var(--companylogo-color1);
+    }
+}
+
+@keyframes productCardImgAnimation{
+    0%{
+        
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}

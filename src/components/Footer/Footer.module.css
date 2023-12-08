@@ -1,0 +1,31 @@
+.container{
+    height: 20vh;
+    background-image: linear-gradient(to top, var(--companylogo-color1), rgba(0,0,0,0));
+    display: flex;
+    padding: 1rem;
+}
+
+.Heading{
+    color: white;
+    font-weight: 900;
+}
+
+.LinksBox{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+
+}
+
+.Links{
+    gap: 0.5rem;
+    /* background-color: red; */
+}
+.Link{
+    color: whitesmoke;
+}
+
+.map{
+    height: 10rem;
+    width: 15rem;
+}
