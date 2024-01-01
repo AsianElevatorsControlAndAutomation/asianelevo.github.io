@@ -1,6 +1,6 @@
 1:HL["/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-2:HL["/_next/static/css/f1326c089455f03b.css","style",{"crossOrigin":""}]
-0:["r-hONNjpuqK7enS3OaP77",[[["",{"children":["product",{"children":[["id","adco01","d"],{"children":["__PAGE__?{\"id\":\"adco01\"}",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f1326c089455f03b.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
+2:HL["/_next/static/css/3448a2fe8fea7bf7.css","style",{"crossOrigin":""}]
+0:["1IBOFy9oA6QzHznVW71dF",[[["",{"children":["product",{"children":[["id","adco01","d"],{"children":["__PAGE__?{\"id\":\"adco01\"}",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3448a2fe8fea7bf7.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
 5:HL["/_next/static/css/ef46db3751d8e999.css","style",{"crossOrigin":""}]
 6:I[3994,["326","static/chunks/326-1e3507712f7eed15.js","994","static/chunks/994-5a191b988403b136.js","868","static/chunks/868-8f19b4013fb88267.js","931","static/chunks/app/page-e6432d73ba09b3ef.js"],""]
 7:I[8326,["326","static/chunks/326-1e3507712f7eed15.js","188","static/chunks/app/product/%5Bid%5D/page-b5279da27e124481.js"],""]

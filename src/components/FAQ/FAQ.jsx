@@ -9,7 +9,7 @@ const FAQ = () => {
         <Script src="/Scripts/Accordian.jsx" strategy='afterInteractive' />
         <Title type={2} title="FAQs" subTitle="Frequently Asked Questions" color="red" />
         <div className='grid grid-cols-6'>
-          <div className='col-span-4'>
+          <div className='col-span-6 md:col-span-4'>
             {FAQInformation.map((element, idx)=>
               <div key={idx}>
                 <button className="accordion bg-transparent p-5 my-2 w-full text-left outline-none text-2xl cursor-pointer border rounded-xl
@@ -22,7 +22,7 @@ const FAQ = () => {
               </div>
             )}
           </div>
-          <div className='flex col-span-2'>
+          <div className='hidden md:flex col-span-2'>
             <img src='/FAQ.svg' alt='faq' />
           </div>
         </div>

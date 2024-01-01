@@ -11,7 +11,7 @@ import FAQ from '@/components/FAQ/FAQ'
 
 const ReachUs = () => {
   return (
-    <div className='md:container mx-auto container'>
+    <div className='md:container md:mx-auto p-10'>
         <Gutter />
         <Title title="Reach Us" color='orange' />
         <div className='grid grid-cols-1 md:grid-cols-2'>            

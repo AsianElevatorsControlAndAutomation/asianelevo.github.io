@@ -8,11 +8,6 @@ const productsInformation = [
                 subheading: '',
                 images: [
                     {item: '/products/monarch/10.jpg', type: 'img'},
-                    {item: '/products/monarch/20.jpg', type: 'img'},
-                    {item: '/products/monarch/30.jpg', type: 'img'},
-                    {item: '/products/monarch/30.jpg', type: 'img'},
-                    {item: '/products/monarch/30.jpg', type: 'img'},
-                    {src: 'https://www.youtube.com/embed/xSv8eNjxdPM', title: 'Asian Smart Elevator IoT Solution', type: 'iframe'}
                 ],
                 features: [
                     'No of Stop: AD009 8 Stop Down Collective and 6 Stop Collective Selective.',
@@ -132,7 +127,10 @@ const productsInformation = [
                 id: 'asian01',
                 heading: 'SMART IOT ELEVATOR',
                 subheading: '',
-                images: [{item: '/products/asian/10.jpg', type: 'img'}],
+                images: [
+                    {item: '/products/asian/10.jpg', type: 'img'},
+                    {src: 'https://www.youtube.com/embed/xSv8eNjxdPM', title: 'Asian Smart Elevator IoT Solution', type: 'iframe'}
+                ],
                 features: [
                     'Get real time lift updates from anywhere',
                     'Easy remote lift controls',
