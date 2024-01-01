@@ -21,8 +21,8 @@ const NavbarItems = [
     },
     {
         id: 5,
-        title: "Blog",
-        url: "/blog",
+        title: "Blogs",
+        url: "/blogs",
     }
 ]
 

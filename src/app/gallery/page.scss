@@ -1,9 +1,3 @@
-.container{
-    // min-height: 100vh;
-	justify-content: center;
-	// display: flex;
-	
-}
 .Heading{
     font-weight: 700;
     font-size: 2.5rem;
@@ -39,7 +33,7 @@
     transform: scale(1.1);
 }
 .eventImage{
-    overflow: hidden;
+    overflow: scroll;
     /* width: 10rem; */
 }
 

@@ -2,12 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import './page.scss'
 import Gutter from '@/components/Gutter/Gutter'
-import { products } from './content'
+import { productsInformation } from '../../constants/ProductsInformation'
+import Title from '@/components/Title/Title'
 const Products = () => {
   return (
     <div className='md:container mx-auto container'>
         <Gutter />
-            {products.map((company, cidx)=>(
+        <Title title="Products" color='blue' />
+            {productsInformation.map((company, cidx)=>(
                 <div key={cidx} className="grid md:grid-cols-2 lg:grid-cols-3 justify-center mt-4">
                     {company.products.map((product,pidx)=>(
                         // <div key={`${cidx}-${pidx}`} className="group border-gray-100/30 flex w-full max-w-xs flex-col self-center rounded-lg border shadow-md mt-4">

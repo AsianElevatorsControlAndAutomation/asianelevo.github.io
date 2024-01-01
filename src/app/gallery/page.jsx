@@ -1,16 +1,18 @@
 import React from 'react'
 import './page.scss'
 import Gutter from '@/components/Gutter/Gutter'
-import { content } from './content.jsx'
+import { GalleryInformation } from '@/constants/GalleryInformation'
+import Title from '@/components/Title/title'
 const Gallery = () => {
   return (
-    <div className='md:container mx-auto container'>
+    <div className='md:container mx-auto container mb-20'>
         <Gutter />
-        <div className='Heading'>
+        <Title title="Gallery" color='red' />
+        {/* <div className='Heading'>
             <h1>Gallery</h1>
-        </div>
+        </div> */}
         <div className='grid grid-cols-1 Body'>
-            {content.map((event, idx)=>(
+            {GalleryInformation.map((event, idx)=>(
                 <div key={idx} className='eventContainer'>
                     <div className='eventHeading'>
                         {event.title}
@@ -23,8 +25,8 @@ const Gallery = () => {
                             <figure key={idx2} className="blue frame">
                                 <img src={`/gallery/${event.folderName}/${image.img}`} alt={image.alt} />
                                 <figcaption>
-                                    <h2>She is a Photographer</h2>
-                                    <span>by <span className="fn">Alex Spencer</span></span>
+                                    <h2>{image.alt}</h2>
+                                    <span>at <span className="fn">{event.title}</span></span>
                                 </figcaption>
                             </figure>
                         ))}

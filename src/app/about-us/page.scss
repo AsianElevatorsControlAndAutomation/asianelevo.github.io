@@ -1,0 +1,122 @@
+.aboutus-img{
+    
+}
+
+.Heading{
+    font-weight: 700;
+    font-size: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Heading h1{
+    border-bottom: 2px solid red;
+}
+.eventContainer{
+}
+.eventHeading{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5rem 0;
+}
+.eventImageContainer{
+    /* display: flex;
+    gap: 2rem; */
+    // padding: 1rem;
+}
+.eventImageBox{
+    // border: 10px solid white;
+    border-style: double;
+    border-radius: 10px;
+    display: flex;
+    transition: all .5s ease-in-out;
+}
+.eventImageBox:hover img{
+    transform: scale(1.1);
+}
+.eventImage{
+    overflow: hidden;
+    /* width: 10rem; */
+}
+
+
+.frame{
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+	margin: auto 0.5rem;
+	padding: 0.8rem;
+	border: 1rem solid #efefef;
+	background-color: #eaeaea;
+	position: relative;
+	transition: .3s ease;
+	box-shadow: inset 1px 1px 3px rgba(0,0,0,.3),
+			  1px 1px 2px rgba(0,0,0,.2),
+			  40px 35px 70px -10px rgba(0,0,0,.5),
+			  -20px -20px 100px -10px rgba(255,255,255,.8);
+	
+	// Glass reflection
+	&:before{
+		content:" ";
+		left: 0.3rem;
+		top: 0.3rem;
+		bottom: 0.3rem;
+		right: 0.3rem;
+		position: absolute;
+		background: linear-gradient(135deg, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(255,255,255,.2) 50%, rgba(255,255,255,0) );
+		transition: .3s ease;
+	}
+	&:hover{
+		&:before{
+			opacity: 0;
+		}
+	}
+	
+	img{
+		box-shadow: 0 0 1rem rgba(0,0,0,.1);
+	}
+
+	&.blue{
+		border: 10px solid var(--companylogo-color1);
+		box-shadow: 	inset 1px 1px 3px rgba(0,0,0,.3),
+			  		1px 1px 2px rgba(0,0,0,.2),
+			  		40px 35px 70px -10px rgba(0,0,0,.5),
+			  		-20px -20px 100px -10px rgba(#333,.2);
+		box-shadow: 	inset 1px 1px 3px rgba(53,122,188,.3),
+			  		1px 1px 2px rgba(53,122,188,.2),
+			  		40px 35px 70px -10px rgba(53,122,188, 0.5),
+			  		-20px -20px 100px -10px rgba(#333,.2);
+	}
+	
+	figcaption{
+		position: absolute;
+		top: 100%;
+		margin-top: 1.5rem;
+		font-family: Futura, Open Sans, Raleway, sans-serif;
+		h2, span{
+			transform: translateY(-2rem);
+			opacity: 0;
+			transition: .3s ease;
+		}
+		
+		h2{
+			margin: 0;
+		}
+		span{
+			color: #555;
+			transition-delay: .2s;
+		}
+	}
+	
+	&:hover{
+		transform: scale(1.1);
+		figcaption{
+			h2,span{
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
+}

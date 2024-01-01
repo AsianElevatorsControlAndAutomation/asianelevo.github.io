@@ -1,13 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.cdnfonts.com/css/revue');
+/* @import url('https://fonts.cdnfonts.com/css/revue'); */
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* Light Theme for later */
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 214, 219, 220;
-  --companylogo-color1: rgba(53,122,188,1)
+  --background-end-rgb: 214, 219, 220; */
+  --companylogo-color1: rgba(53,122,188,1);
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  /* --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,4 +41,24 @@ body {
 
 .futura{
   font-family: Futura, Open Sans, Raleway, sans-serif;
+}
+
+.container{
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: 'revue';
+  font-style: regular;
+  font-weight: 400;
+  src: url('/revue.ttf') format('truetype');
+}
+
+.glass{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

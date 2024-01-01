@@ -1,3 +1,25 @@
 .container{
     height: 100vh;
 }
+
+.gallery {
+    background: #EEE;
+  }
+  
+  .galleryCell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: galleryCell;
+  }
+  
+  /* cell number */
+  .galleryCell:before {
+    display: block;
+    text-align: center;
+    content: counter(galleryCell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }

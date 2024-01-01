@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import Gutter from '@/components/Gutter/Gutter.jsx'
-import { products } from '@/app/products/content.jsx'
+import { productsInformation } from '@/constants/ProductsInformation.jsx'
 import ProductImage from './productImage'
 const Product = (props) => {
     let product = {}
-    products.forEach(company=>{
+    productsInformation.forEach(company=>{
         company.products.forEach(element=>{
             if(element.id===props.params.id){
                 product = {...element, company: company.company}
@@ -18,10 +18,10 @@ const Product = (props) => {
         <div className='md:container mx-auto container min-h-[100vh]'>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row -mx-4">
-                    <ProductImage images={JSON.stringify(product.images)||[]}/>
+                    <ProductImage images={JSON.stringify(product.images)||[]} product={product.heading}/>
                     <div className="md:flex-1 px-4">
                         <h2 className="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">{product.heading}</h2>
-                        <p className="text-gray-500 text-sm">By <a href="#" className="text-indigo-600 hover:underline">{product.company}</a></p>
+                        <p className="text-gray-500 text-sm">By <Link href="#" className="text-indigo-600 hover:underline">{product.company}</Link></p>
 
                         {/* <div className="flex items-center space-x-4 my-4">
                         <div>
@@ -38,7 +38,7 @@ const Product = (props) => {
 
                         <div className='grid grid-cols-1 my-4 gap-6'>
                             <div className='grid grid-cols-1'>
-                                <h2 class="text-2xl font-extrabold dark:text-white mb-2 revue">Features</h2>
+                                <h2 className="text-2xl font-extrabold dark:text-white mb-2 revue">Features</h2>
                                 {product.features.map((feature, idx)=>(
                                     <div key={idx} className='flex items-start'>
                                         <img src='/star.svg' alt='bullet-point' className='w-6'/>
@@ -47,7 +47,7 @@ const Product = (props) => {
                                 ))}
                             </div>
                             <div className='grid grid-cols-1'>
-                                <h2 class="text-2xl font-extrabold dark:text-white mb-2 revue">Specifications</h2>
+                                <h2 className="text-2xl font-extrabold dark:text-white mb-2 revue">Specifications</h2>
                                 {product.specifications.map((specification, idx)=>
                                     <div key={idx} className='flex items-start'>
                                         <img src='/arrow.svg' alt='bullet-point' className='w-10'/>
@@ -56,7 +56,7 @@ const Product = (props) => {
                                 )}
                             </div>
                         </div>
-                            <h2 class="text-2xl font-extrabold dark:text-white mb-2 revue">Description</h2>
+                            <h2 className="text-2xl font-extrabold dark:text-white mb-2 revue">Description</h2>
                             {product.description.map((desc, idx)=><p key={idx} className="text-gray-500 my-4">{desc}</p>)}
                     </div>
                 </div>
@@ -68,12 +68,11 @@ const Product = (props) => {
 
 export async function getStaticPaths() {
     let temp = []
-    products.forEach(company=>{
+    productsInformation.forEach(company=>{
         company.products.forEach(element=>{
             temp.push({params: {id: element.id}})
         })
     })
-    console.log(temp)
     return {
         paths: [...temp],
         fallback: false
