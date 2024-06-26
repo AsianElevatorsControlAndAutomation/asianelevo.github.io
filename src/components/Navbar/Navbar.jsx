@@ -10,7 +10,7 @@ const Navbar = () => (
     <Script src="/Scripts/MobileNavbar.jsx" strategy='afterInteractive' />
     <div className="max-w-screen-2xl flex flex-wrap items-center justify-evenly mx-auto p-4">
       <Link href='/' className={`${styles.logo}`}>
-        <img src="/logo-white.png" alt="Asian Elevators Control and Automation Logo" className={styles.logoImg}/>
+        <img src="/logo-white.webp" alt="Asian Elevators Control and Automation Logo" className={styles.logoImg}/>
       </Link>
       <ul className={`${styles.navItems} hidden lg:grid items-center md:grid-cols-6 `}>
       {/* <ul className={`${styles.navItems} grid items-center md:grid-cols-6 grid-cols-2 max-md:w-full `}> */}

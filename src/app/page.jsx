@@ -7,10 +7,14 @@ import ProductsHighlights from '@/components/ProductsHighlights/ProductsHighligh
 import FAQ from '@/components/FAQ/FAQ'
 import ReachUsHighlights from '@/components/ReachUsHighlights/ReachUsHighlights'
 import ServicesHighlights from '@/components/ServicesHighlights/ServicesHighlights'
+import Script from "next/script";
 
 export default function Home() {
   return (
     <div className='min-h-screen'>
+      {/* <Script src="/Scripts/Animate.jsx" strategy='afterInteractive' /> */}
+      <Script src="/Scripts/Accordian.jsx" strategy='afterInteractive' />
+      <Script src="/Scripts/MobileNavbar.jsx" strategy='afterInteractive' />
       <Carousel />
       <AboutUsHighlights />
       <ProductsHighlights />

@@ -1,22 +1,22 @@
 export default [
     {
-        img: '/SmartIoTLift.png',
+        img: '/SmartIoTLift.webp',
         alt: 'Asian Elevators Smart IoT Lift'
     },
     {
-        img: '/DriveAndCardRepair.png',
+        img: '/DriveAndCardRepair.webp',
         alt: 'Lift Drive and Card Repair Services'
     },
     {
-        img: '/MonarchInovanceAuthorizedDistributors.png',
+        img: '/MonarchInovanceAuthorizedDistributors.webp',
         alt: '/Monarch Inovance Authorized Distributors',
     },
     {
-        img: '/MonarchBSTLOPCOP.png',
-        alt: '/Monarch BST LOP COP.png'
+        img: '/MonarchBSTLOPCOP.webp',
+        alt: '/Monarch BST LOP COP.webp'
     },
     {
-        img: '/AdcoControlsProducts.png',
+        img: '/AdcoControlsProducts.webp',
         alt: 'View Range of Adco Controls Products are available'
     },
 ]

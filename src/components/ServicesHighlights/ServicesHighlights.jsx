@@ -10,7 +10,7 @@ const ServicesHighlights = () => {
         <Title type={2} title="Services" subTitle="Our" color="orange" />
           {ServicesInformation.map((element, idx)=>
             <div key={idx} className='grid grid-cols-5 mt-3'>
-              <div className='col-span-5 md:col-span-2 pr-5'>
+              <div className='col-span-5 md:col-span-2 pr-5 entryAnimateRight'>
                   <img src={element.img} alt={element.title} />
               </div>
               <div className='col-span-5 md:col-span-3 mt-2'>
@@ -19,7 +19,7 @@ const ServicesHighlights = () => {
                   <div className='text-3xl revue pb-2'>
                     <Title type={2} subTitle={element.title} title="" color="blue" />
                   </div>
-                  <div>
+                  <div className='entryAnimateLeft'>
                     {element.description}
                   </div>
                 </div>

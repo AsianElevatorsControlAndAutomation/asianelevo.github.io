@@ -63,6 +63,7 @@
   filter: drop-shadow(0 0 10px #0003);
   /* perspective: 100px; */
   max-height: 90vh;
+  animation: RevealUp 2s;
 }
 
 .carousel__viewport {

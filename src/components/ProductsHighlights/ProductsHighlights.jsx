@@ -18,7 +18,7 @@ const ProductsHighlights = () => {
   return (
     <div className='p-10'>
         <Title type={2} title="Products" subTitle="Our" color="green" />
-        <div className='overflow-x-scroll flex flex-auto flex-no-wrap w-full mb-1 mt-3'>
+        <div className='overflow-x-scroll flex flex-auto flex-no-wrap w-full mb-1 mt-3 entryAnimateRight'>
           {products.map((product, idx)=>
             <div key={idx} className='grow-0 shrink-0 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/5 pr-10'>
               <Link href={`/product/${product.id}`} className="max-w-sm rounded overflow-hidden shadow-lg productCard">
@@ -37,7 +37,7 @@ const ProductsHighlights = () => {
             </div>
           )}
         </div>
-        <div className='w-full flex justify-center'>
+        <div className='w-full flex justify-center entryAnimateUp'>
           <Link href={'/products'} className='glass px-3 py-1 rounded-full hvr-float'>View More</Link>
         </div>
     </div>

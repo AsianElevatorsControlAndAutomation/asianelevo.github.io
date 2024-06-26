@@ -5,12 +5,13 @@ import Link from 'next/link'
 const ProductImage = props => {
     let images = JSON.parse(props.images)
     let product = props.product
+    let resources = JSON.parse(props.resources)
     const [showImg, setShowImg] = useState(0)
     return (
     <div className="md:flex-1 px-4">
         {images.length>0&&
             <>
-                <figure className="relative rounded-lg bg-gray-100 max-h-[30rem]">
+                <figure className="relative rounded-lg bg-gray-100 max-h-[30rem] overflow-scroll bg-transparent startAnimationUp">
                     {/* <figure className="rounded-lg bg-gray-100 mb-4 flex justify-center" onClick={()=>setShowImg(showImg+1)}> */}
                         {images[showImg].type==='img'&&
                             <img src={images[showImg].item} alt='' className='rounded-2xl' />
@@ -38,11 +39,11 @@ const ProductImage = props => {
                         </button>
                     
                 </figure>
-                <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
+                <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-10">
                     {images.map((img, idx)=>
-                        <figure key={idx}>
+                        <figure className='startAnimationUp' key={idx}>
                             {img.type==='img'&&
-                                <img src={img.item} alt={''} className={`rounded-2xl ${idx==showImg?'border-4 border-blue-500':''}`} onClick={()=>{setShowImg(idx); window.scroll({top:0, behavior: 'smooth'}) }} />
+                                <img src={img.item} alt={''} className={`h-24 w-24 rounded-2xl ${idx==showImg?'border-4 border-blue-500':''}`} onClick={()=>{setShowImg(idx); window.scroll({top:0, behavior: 'smooth'}) }} />
                             }
                             {img.type==='iframe'&&
                                 <img src={'/youtube.svg'} alt={`youtube link to ${img.src}`} className='rounded-2xl' onClick={()=>{setShowImg(idx); window.scroll({top:0, behavior: 'smooth'}) }} />
@@ -53,9 +54,21 @@ const ProductImage = props => {
             </>
         }
         <span>
-            {ContactInformation.social.filter(s=>s.type==='whatsapp').map(info=>(
-                <Link href={`${info.url}?text=Hi, I would like to enquire about ${product.replace('+', 'Plus')}`}>
-                    <img src={info.image} alt="whatsapp icon" className='h-20 w-full bg-sky-50 pl-2 pr-2 m-1 rounded-3xl' />
+            {ContactInformation.social.filter(s=>s.type==='whatsapp').map((info, idx)=>(
+                <Link key={idx} href={`${info.url}?text=Hi, I would like to enquire about ${product.replace('+', 'Plus')}`}>
+                    <img src={info.image} alt="whatsapp icon" className='h-20 w-full bg-sky-50 pl-2 pr-2 m-1 rounded-3xl startAnimationDown' />
+                </Link>
+            ))}
+        </span>
+        <span>
+            {resources.map((info, idx)=>(
+                <Link key={idx} href={`${info.item}`} target='_blank'>
+                    {info.type==='pdf'&&
+                    <div className='flex justify-center items-center h-12 bg-sky-50 pl-2 pr-2 m-1 rounded-2xl text-black font-bold text-center startAnimationDown'>
+                        <img src={'/pdf2.svg'} alt="whatsapp icon" className='h-10'  />
+                        {info.title}
+                    </div>
+                    }
                 </Link>
             ))}
         </span>

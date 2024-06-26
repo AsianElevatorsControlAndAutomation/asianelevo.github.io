@@ -11,7 +11,7 @@ const ReachUsHighlights = () => {
     <div className='m-10'>
         
         <div className='grid grid-cols-1 md:grid-cols-2'>            
-            <div className='hidden md:flex'>
+            <div className='hidden md:flex entryAnimateDown'>
                 <img src="/ContactUs.svg" alt='contact us' className='w-10/12 mb-2' />
             </div>
             <div>

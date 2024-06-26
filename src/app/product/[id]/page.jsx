@@ -18,10 +18,10 @@ const Product = (props) => {
         <div className='md:container mx-auto container min-h-[100vh]'>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row -mx-4">
-                    <ProductImage images={JSON.stringify(product.images)||[]} product={product.heading}/>
+                    <ProductImage images={JSON.stringify(product.images)||[]} resources={JSON.stringify(product.resources)||JSON.stringify([])} product={product.heading}/>
                     <div className="md:flex-1 px-4">
-                        <h2 className="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">{product.heading}</h2>
-                        <p className="text-gray-500 text-sm">By <Link href="#" className="text-indigo-600 hover:underline">{product.company}</Link></p>
+                        <h1 className="mb-2 leading-tight tracking-tight font-bold text-gray-200 text-2xl md:text-3xl startAnimationRight">{product.heading}</h1>
+                        <h2 className="text-gray-500 text-sm">By <Link href="#" className="text-indigo-600 hover:underline startAnimationRight">{product.company}</Link></h2>
 
                         {/* <div className="flex items-center space-x-4 my-4">
                         <div>
@@ -36,9 +36,9 @@ const Product = (props) => {
                         </div>
                         </div> */}
 
-                        <div className='grid grid-cols-1 my-4 gap-6'>
+                        <div className='grid grid-cols-1 my-4 gap-6 startAnimationDown'>
                             <div className='grid grid-cols-1'>
-                                <h2 className="text-2xl font-extrabold dark:text-white mb-2 revue">Features</h2>
+                                {product.features.length>0&&<h2 className="text-2xl font-extrabold dark:text-white mb-2 revue">Features</h2>}
                                 {product.features.map((feature, idx)=>(
                                     <div key={idx} className='flex items-start'>
                                         <img src='/star.svg' alt='bullet-point' className='w-6'/>
@@ -47,7 +47,7 @@ const Product = (props) => {
                                 ))}
                             </div>
                             <div className='grid grid-cols-1'>
-                                <h2 className="text-2xl font-extrabold dark:text-white mb-2 revue">Specifications</h2>
+                                {product.specifications.length>0&&<h2 className="text-2xl font-extrabold dark:text-white mb-2 revue">Specifications</h2>}
                                 {product.specifications.map((specification, idx)=>
                                     <div key={idx} className='flex items-start'>
                                         <img src='/arrow.svg' alt='bullet-point' className='w-10'/>
@@ -56,8 +56,11 @@ const Product = (props) => {
                                 )}
                             </div>
                         </div>
-                            <h2 className="text-2xl font-extrabold dark:text-white mb-2 revue">Description</h2>
-                            {product.description.map((desc, idx)=><p key={idx} className="text-gray-500 my-4">{desc}</p>)}
+                        <div className='startAnimationDown'>
+                            {product.description.length>0&&<h2 className="text-2xl font-extrabold dark:text-white mb-2 revue entryAnimateDown">Description</h2>}
+                            {product.description.map((desc, idx)=><p key={idx} className="text-gray-500 my-4 entryAnimateUp">{desc}</p>)}
+
+                        </div>
                     </div>
                 </div>
             </div>

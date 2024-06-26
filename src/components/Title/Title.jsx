@@ -5,16 +5,18 @@ const Title = props => {
   return (
     <>
     {props.type===2?
-      <div>
+      <div className='entryAnimateUp'>
         <div className='text-2xl flex'>
           <div className={`w-2 bg-${props.color}-500 mr-3`} />
             {props.subTitle}
           </div>
-        <div className='text-4xl revue pl-5'>{props.title}</div>
+          <div className='text-4xl revue pl-5'>
+              <h1>{props.title}</h1>
+          </div>
       </div>
     :
-      <div className='font-bold text-4xl flex justify-center w-full'>
-          <h1 className={`border-b-4 border-${props.color}-700`}>{props.title}</h1>
+      <div className='font-bold text-4xl flex justify-center w-full entryAnimateUp'>
+          <h1 className={`border-b-4 border-${props.color}-700 revue`}>{props.title}</h1>
       </div>
     }
     </>

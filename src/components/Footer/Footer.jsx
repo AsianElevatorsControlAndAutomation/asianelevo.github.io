@@ -8,7 +8,7 @@ const Footer = () => {
     <div className={`${styles.container} w-full overflow-scroll p-4`}>
       <div className={`grid grid-cols-2 md:grid-cols-3 md:container lg:grid-cols-6 mx-auto`}>
         <div>
-          <img src="/logo-white.png" alt="Asian Elevators Control and Automation Logo" className={styles.logoImg}/>
+          <img src="/logo-white.webp" alt="Asian Elevators Control and Automation Logo" className={styles.logoImg}/>
           <p className='text-sm italic'>
             We are a leading supplier of elevator equipment since 2007. With a skilled team boasting over 35 years of industry experience, we are recognized for our reliability, integrated solutions, and cutting-edge technology.
           </p>

@@ -16,51 +16,51 @@ const AboutUsInformation = {
         folderName: 'Certificates',
         images: [
             {
-                img: 'Inovance2023.png',
+                img: 'Inovance2023.webp',
                 alt: 'Inovance 2023 Certificate'
             },
             {
-                img: 'Tectronics2023.png',
+                img: 'Tectronics2023.webp',
                 alt: 'Tectronics 2023 Certificate'
             },
             {
-                img: 'IndiaMart2022.png',
+                img: 'IndiaMart2022.webp',
                 alt: 'India Mart 2022 Certificate'
             },
             {
-                img: 'NFI.png',
+                img: 'NFI.webp',
                 alt: 'NFI ISO 9001-2015 Quality Management System Certificate'
             },
             {
-                img: 'Udyam.png',
+                img: 'Udyam.webp',
                 alt: 'Udyam Small Manufacturing Registeration Certificate'
             },
             {
-                img: 'Inovance2022.png',
+                img: 'Inovance2022.webp',
                 alt: 'Inovance 2022 Certificate'
             },
             {
-                img: 'Inovance2021.png',
+                img: 'Inovance2021.webp',
                 alt: 'Inovance 2021 Certificate'
             },
             {
-                img: 'Inovance2020.png',
+                img: 'Inovance2020.webp',
                 alt: 'Inovance 2020 Certificate'
             },
             {
-                img: 'Inovance2019.png',
+                img: 'Inovance2019.webp',
                 alt: 'Inovance 2019 Certificate'
             },
             {
-                img: 'Inovance2016.png',
+                img: 'Inovance2016.webp',
                 alt: 'Inovance 2016 Certificate'
             },
             {
-                img: 'Tectronics2022.png',
+                img: 'Tectronics2022.webp',
                 alt: 'Tectronics 2022 Certificate'
             },
             {
-                img: 'IndiaMart2018.png',
+                img: 'IndiaMart2018.webp',
                 alt: 'India Mart 2018 Certificate'
             },
         ]
@@ -70,15 +70,15 @@ const AboutUsInformation = {
         folderName: 'Awards',
         images: [
             {
-                img: 'Inovance2019.png',
+                img: 'Inovance2019.webp',
                 alt: 'Inovance 2019 Outstanding Achievement Award'
             },
             {
-                img: 'Inovance2019_Photo.png',
+                img: 'Inovance2019_Photo.webp',
                 alt: 'Inovance 2019 Annual Distribution Meet Photo'
             },
             {
-                img: 'Gefran2012.png',
+                img: 'Gefran2012.webp',
                 alt: 'Gefran 2012 Best Distributor Motion Products'
             }
         ]
